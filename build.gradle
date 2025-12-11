@@ -33,6 +33,7 @@ dependencies {
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
+    include "io.github.cottonmc:LibGui:11.1.0+1.21"
     modClientImplementation("io.github.cottonmc:LibGui:11.1.0+1.21")
 
     modCompileOnly files("libs/core-0.1.0.jar")
