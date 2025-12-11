@@ -1,34 +1,39 @@
 {
-	"schemaVersion": 1,
-	"id": "notium",
-	"version": "${version}",
-	"name": "Notium",
-	"description": "This is an example description! Tell everyone what your mod is about!",
-	"authors": [
-		"Me!"
-	],
-	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
-	},
-	"license": "CC0-1.0",
-	"icon": "assets/notium/icon.png",
-	"environment": "*",
-	"entrypoints": {
-		"main": [
-			"melyron.notium.Notium"
-		]
-	},
-	"mixins": [
-		"notium.mixins.json"
-	],
-	"depends": {
-		"fabricloader": ">=0.18.1",
-		"minecraft": "~1.21.1",
-		"java": ">=21",
-		"fabric-api": "*"
-	},
-	"suggests": {
-		"another-mod": "*"
-	}
+  "schemaVersion": 1,
+  "id": "notium",
+  "version": "${version}",
+  "name": "Notium",
+  "description": "Attic Community mod for write notes",
+  "authors": [
+    "Melyron"
+  ],
+  "contact": {
+    "homepage": "https://discord.gg/attcx",
+    "sources": "https://github.com/minecraft-attic/notium"
+  },
+  "license": "CC0-1.0",
+  "icon": "assets/notium/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "server": [
+      "attic.notium.Notium"
+    ],
+    "client": [
+      "attic.notium.NotiumClient"
+    ]
+  },
+  "depends": {
+    "fabricloader": "*",
+    "minecraft": "~1.21.1",
+    "java": ">=21",
+    "fabric-api": "*"
+  },
+  "dependsOn": {
+    "client": {
+      "libgui": "11.1.0+1.21"
+    },
+    "server": {
+      "core": "*"
+    }
+  }
 }

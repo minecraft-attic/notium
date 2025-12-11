@@ -1,4 +1,4 @@
-package melyron.notium;
+package attic.notium.util;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;

@@ -9,11 +9,39 @@ base {
 	archivesName = project.archives_base_name
 }
 
+loom {
+    splitEnvironmentSourceSets()
+
+    mods {
+        "notium" {
+            sourceSet sourceSets.main
+            sourceSet sourceSets.client
+        }
+    }
+}
+
+repositories {
+    maven {
+        name = "CottonMC"
+        url = "https://server.bbkr.space/artifactory/libs-release"
+    }
+}
+
 dependencies {
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
 	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+
+    modClientImplementation("io.github.cottonmc:LibGui:11.1.0+1.21")
+
+    modCompileOnly files("libs/core-0.1.0.jar")
+    modRuntimeOnly files("libs/core-0.1.0.jar")
+
+    implementation "com.electronwill.night-config:core:3.8.3"
+    implementation "com.electronwill.night-config:toml:3.8.3"
+
+    implementation "com.squareup.okhttp3:okhttp:5.3.2"
 }
 
 processResources {
