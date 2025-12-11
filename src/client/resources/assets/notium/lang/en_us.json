@@ -1,0 +1,9 @@
+{
+  "key.notium.open_note": "Open Note Screen",
+  "text.notium.screen_title": "New Note",
+  "text.notium.title": "Title",
+  "text.notium.description": "Description",
+  "text.notium.position": "Position (optional)",
+  "text.notium.send_button": "Send Note",
+  "category.notium": "Notium"
+}

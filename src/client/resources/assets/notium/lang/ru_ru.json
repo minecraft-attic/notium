@@ -1,0 +1,9 @@
+{
+  "key.notium.open_note": "Открыть заметку",
+  "text.notium.screen_title": "Новая заметка",
+  "text.notium.title": "Заголовок",
+  "text.notium.description": "Описание",
+  "text.notium.position": "Координаты (необязательно)",
+  "text.notium.send_button": "Отправить",
+  "category.notium": "Notium"
+}
