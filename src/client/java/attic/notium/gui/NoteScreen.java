@@ -59,7 +59,13 @@ public class NoteScreen extends Screen {
         desc.setRootPanel(root);
         root.validate(desc);
 
-        return new CottonClientScreen(desc);
+        return new CottonClientScreen(desc) {
+            @Override
+            public void init() {
+                super.init();
+                titleField.requestFocus();
+            }
+        };
     }
 
     private static VanillaTextField customize(VanillaTextField textField) {

@@ -29,8 +29,7 @@ public class NoteSender {
 
         Api.Player.Message.info(player, "Note is sending");
 
-        int code = Api.sendWebhook(Notium.CONFIG.get().webhook().url(), embed);
-
+        int code = Api.Discord.sendWebhook(Notium.CONFIG.get().webhook().url(), embed);
         if (code < 200 || code >= 300) {
             Api.Player.Message.error(player, "Note was not delivered");
         } else {

@@ -36,8 +36,8 @@ dependencies {
     include "io.github.cottonmc:LibGui:11.1.0+1.21"
     modClientImplementation("io.github.cottonmc:LibGui:11.1.0+1.21")
 
-    modCompileOnly files("libs/core-0.1.0.jar")
-    modRuntimeOnly files("libs/core-0.1.0.jar")
+    modCompileOnly files("libs/core-0.3.6.jar")
+    modRuntimeOnly files("libs/core-0.3.6.jar")
 
     implementation "com.electronwill.night-config:core:3.8.3"
     implementation "com.electronwill.night-config:toml:3.8.3"
